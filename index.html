@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>3d object - example</title>
+
+
+  <style>
+    body {
+      opacity: 0;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    html {
+      background-color: #ffffff;
+    }
+  </style>
+
+
+</head>
+
+<body class="fixed">
+  <div class="preloader active">
+    i'm coming, i'm coming
+  </div>
+  <main>
+    <div class="container">
+      <div class="model-carousel">
+        <div class="model-preloader">
+          <div class="preloader-line"></div>
+          <div class="model-preloader-img" style="background-image: url(./1.jpg)"></div>
+        </div>
+        <div class="img-bg">
+          <img class="slide-img" src="" alt="">
+        </div>
+      </div>
+
+      <div class="model-information">
+        <div class="information-tabs">
+          <a href="#" class="tab materials active" data-tab="1">
+            <p>1. Тканини</p>
+          </a>
+        </div>
+
+        <div class="information-content materials active" data-content="1">
+          <div class="material-wrapper">
+            <p class="material-name">Тканина <span>1</span></p>
+            <ul id="texture" class="textures-list">
+              <li class="list-item">
+                <img src="./texture/fabric/hollywood-02.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/fabric/hollywood-16.jpg" alt="" name="fabric" value="hollywood-16.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/fabric/leather2.jpg" alt="" name="fabric" value="leather2.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/1.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+            </ul>
+          </div>
+          <div class="material-wrapper">
+            <p class="material-name">Тканина <span>2</span></p>
+            <ul class="textures-list">
+              <li class="list-item">
+                <img src="./texture/1.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/1.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/1.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+              <li class="list-item">
+                <img src="./texture/1.jpg" alt="" name="fabric" value="hollywood-02.jpg">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <link rel="stylesheet" href="./modal.css">
+
+
+  <script src="./libs/three.min.js"></script>
+
+  <script src="./libs/OrbitControls.js"></script>
+  <script src="./libs/WebGL.js"></script>
+
+  <script src="./libs/DDSLoader.js"></script>
+  <script src="./libs/MTLLoader.js"></script>
+  <script src="./libs/OBJLoader.js"></script>
+
+
+  <script src="./model.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function (e) {
+      document.querySelector('body').classList.remove('fixed');
+      setTimeout(function () {
+        document.querySelector('.preloader').classList.remove('active')
+      }, 1500)
+
+    });
+  </script>
+
+</body>
+
+</html>
